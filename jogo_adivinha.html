@@ -1,0 +1,41 @@
+<meta charset ="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function sorteia(n){
+    return Math.round(Math.random() * n);
+}
+
+var numeroPensado = sorteia(10);
+
+
+var tentativas = 1;
+while(tentativas <= 3){
+
+    var chute = parseInt(prompt("Pensei em um número. Tente adivinhar qual foi!"));
+
+      if (chute == numeroPensado) {
+         mostra("Parabéns, você acertou! Eu realmente pensei no " + numeroPensado);
+         break;
+        } 
+        
+    else { 
+             if (chute > numeroPensado) {
+              mostra("Você errou! O número que você chutou é maior que o número pensado.");
+            } else {
+                 mostra("Você errou! O número que você chutou é menor que o número pensado");
+                 }
+            }
+     tentativas++;       
+        }
+
+</script>

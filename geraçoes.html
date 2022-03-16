@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var chegadaDosPt = 1500;
+var anoAtual = 2021;
+var cronologia = anoAtual - chegadaDosPt;
+var quantidadeDeGerações = cronologia/ 28;
+
+quantidadeDeGerações = Math.round(cronologia/28);
+
+function pulaLinha() {
+
+    document.write("<br>");
+}
+
+function mostra(gerações) {
+
+    document.write(gerações);
+    pulaLinha();
+
+}
+
+mostra("Passaram-se aproximadamente " + quantidadeDeGerações + " gerações.");
+
+</script>
